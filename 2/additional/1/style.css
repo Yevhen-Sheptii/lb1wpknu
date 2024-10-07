@@ -1,0 +1,72 @@
+@font-face{
+    font-family: Ukraine; /* даю назву шрифту */
+    src: url(/font/e-Ukraine-Bold.otf); /* під'єдную шрифт */
+}
+body {
+    font-family: Ukraine; /* використання підключеного шрифту */
+    background-color: #e7f5f5; /* фон сайту */
+}
+nav {
+    background-color: #262341; /* колір меню */
+}
+ul li a {
+    transition: background-color 0.3s ease; /* анімація */
+    transition: border-radius 0.2 ease-in-out; /* анімація */
+}
+.menu {
+    display: flex; /* флекс контейнер */
+    justify-content: space-around; /* рівномірно розподіляються по всьому рядку */
+    list-style-type: none; /* прибирає маркування списку */
+}
+
+.menu > li {
+    position: relative; /* відносне позиціонування відноcно цього елементу*/
+}
+
+.menu > li a {
+    text-decoration: none; /* прибирає підкреслення */
+    background-color: #262341; /* колір фону */
+    display: block;  /* задає блочне відображення */
+    padding: 15px 20px; /* відступи від border всередині 15 зверху та знизу і 20 зліва та зправа */
+    color: white; /* колір тексту білий */
+}
+
+.menu > li a:hover {
+    background-color: #f9d94a; /* колір при наведенні */
+    border-radius: 15px; /* анімація */
+}
+.submenu, .submenu-2, .submenu-3 {
+    list-style-type: none; /* прибираємо мітки списку */
+    background-color: #262341; /* колір для фону */
+    display: none; /* ховаємо меню */
+    position: absolute; /* абсолютне позиціонування для точного розташування підменю відносно батьківського елемента. */
+    top: 100%; /*  вниз на висоту батьківського елемента */
+    left: 0; /*поява зправа, вирівнювання зліва*/
+    padding: 0; /* відключаємо внутрішні відступи*/
+}
+
+.submenu > li, .submenu-2 > li, .submenu-3 > li {
+    position: relative;  /* відносне позиціонування відноcно цього елементу*/
+}
+
+.submenu > li a, .submenu-2 > li a, .submenu-3 > li a {
+    padding: 10px 20px; /* відступи від border всередині */
+    color: white; /*колір тексту */
+    text-decoration: none; /* прибирає підкреслення */ 
+    display: block; /* блочне відображення */
+    transition: transform 0.2s ease; /* анімація */
+}
+
+.submenu > li a:hover, .submenu-2 > li a:hover, .submenu-3 > li a:hover {
+    background-color: #f9d94a; /* колір при наведенні */
+    transform: scale(1.02); /* анімація */ 
+}
+
+.menu > li:hover .submenu, .submenu > li:hover .submenu-2, .submenu-2 > li:hover .submenu-3 {
+    display: block; /* блочне відображення */
+}
+
+.submenu-2, .submenu-3 {
+    left: 100%; /* відображення праворуч */
+    top: 0; /* позиціонує підменю на одному рівні по вертикалі */
+}
