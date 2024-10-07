@@ -1,0 +1,85 @@
+@font-face {
+    font-family: Ukraine; /* даю назву шрифту */
+    src: url(/font/e-Ukraine-Bold.otf) /* під'єдную шрифт */
+}
+body {
+    background-color: #e7f5f5; /* фон сайту */
+    font-family: Ukraine; /* використання підключеного шрифту */
+    align-items: center; /* вирівнюю по центру */
+    justify-content: center; /* вирівнюю по центру */
+    display: flex; /* флекс контейнер */
+    text-align: center; /* вирівнюю по центру */
+    flex-direction: column; /* відображення в стовпчик */
+    height: 600px; /* ширина в 600 пікселів */
+}
+h1 {
+    margin-bottom: 50px; /* відступ ззовні */
+    color: #262341; /* колір */
+}
+h2 {
+    margin-top: 50px; /* відступ ззовні */
+}
+p
+{
+    margin-top: -10px; /* відступ ззовні */
+}
+ul li a {
+    transition: background-color 0.7s ease-in-out;
+}
+nav {
+    background-color: #262341; /* колір меню */
+}
+.menu {
+    list-style-type: none; /* прибираємо позначки списків */
+    padding: 0; /* відключаємо внутрішні відступи від border */
+    margin: 0; /* відключаємо зовнішні відступи від border */
+}
+
+.menu > li {
+    position: relative; /* відносне позиціонування відноcно цього елементу*/
+}
+
+.menu > li a {
+    display: block; /* задає блочне відображення */
+    padding: 15px 20px; /* відступи від border всередині 15 зверху та знизу і 20 зліва та зправа */
+    text-align: center; /* вирівнювання тексту по центру */
+    color: white; /* колір тексту білий */
+    text-decoration: none; /* прибирає підкреслення */
+    background-color: #262341; /* колір фону */
+    border-bottom: 1px solid white; /* границя знизу для всіх a */
+}
+
+.menu > li a:hover {
+    background-color: #f9d94a; /* колір при наведенні */
+}
+
+.sub-menu {
+    display: none; /* ховаємо меню */
+    position: absolute; /* абсолютне позиціонування для точного розташування підменю відносно батьківського елемента. */
+    top: 0; /* позиціонує підменю на одному рівні по вертикалі  */
+    left: 100%; /* позиціонує підменю праворуч */
+    list-style-type: none; /* прибираємо мітки списку */
+    background-color: #262341; /* колір для фону */
+    padding: 0; /* відключаємо внутрішні відступи*/
+}
+
+.sub-menu > li {
+    border-bottom: 1px solid white; /* */
+}
+
+.sub-menu > li a {
+    padding: 10px 15px; /* відступи всередині від border всередині на 10 зверху та снизу і 15 зліва та зправа */
+    color: white; /* колір тексту білий */
+    text-decoration: none; /* прибираємо нижнє підкреслення */
+    text-align: center; /* вирівнюємо */
+    display: block; /* блочне відображення */
+}
+
+.sub-menu > li a:hover {
+    background-color: #f9d94a; /* змінення кольору кнопки при наведенні для li у яких .sub-menu - батьківський */
+}
+
+.menu > li:hover .sub-menu {
+    display: block; /* показ підменю */
+}
+
