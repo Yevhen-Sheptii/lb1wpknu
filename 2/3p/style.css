@@ -1,0 +1,66 @@
+#nav, #nav li ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+#nav > li {
+    float: left;
+    width: 120px;
+}
+#nav li ul {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    width: 120px;
+}
+#nav li:hover ul{display: block;}
+#nav > li {
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+    border-top: 1px solid #e8e8e8;
+    border-right:1px solid #e8e8e8;
+}
+#nav > li:hover{background-color: #e8e8e8;}
+#nav > li > a {
+    font: 14px "Geargia";
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+#nav li ul {
+    margin-top: 10px;
+    background-color: #ffffff;
+    border: 1px solid #e8e8e8;
+}
+#nav li ul li {
+    text-align: left;
+    padding: 5px 5px 5px 15px;
+}
+#nav li ul li a{
+    font: 14px "Geargia";
+    color: #000000;
+    text-decoration: none;
+}
+#nav li ul li a:hover{
+    font: 14px "Geargia";
+    color: #553CCF;
+    text-decoration: none;
+}
+@-webkit-keyframes fadeIn{
+    from{
+        -webkit-transform: rotate(0);
+    }
+    to{
+        -webkit-transform: rotate(-360deg);
+    }
+}
+.announcement{
+    width: 200px;
+    height: 200px;
+    padding: 200px;
+    display: block;
+    animation-name: fadeIn;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
